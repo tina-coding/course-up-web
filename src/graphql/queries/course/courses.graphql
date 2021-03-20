@@ -1,0 +1,14 @@
+query Courses {
+  courses {
+    courses {
+      id
+      courseRef
+      name
+      description
+    }
+    errors {
+      field
+      message
+    }
+  }
+}
