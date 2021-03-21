@@ -1,20 +1,16 @@
 import { Flex, useColorMode } from '@chakra-ui/react';
+import { useDarkModeAttr } from '../hooks/useDarkModeAttr';
 
 export const Container = (props) => {
-  const { colorMode } = useColorMode();
-
-  const bgColor = { light: 'gray.50', dark: 'gray.900' };
-
-  const color = { light: 'black', dark: 'white' };
+  const darkMode = useDarkModeAttr();
   return (
     <Flex
       direction="column"
       alignItems="center"
       justifyContent="flex-start"
-      bg={bgColor[colorMode]}
-      color={color[colorMode]}
       height="100vh"
       overflowY="scroll"
+      {...darkMode}
       {...props}
     />
   );
