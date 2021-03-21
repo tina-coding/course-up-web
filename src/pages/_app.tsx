@@ -1,5 +1,6 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react';
+import Main from '../components/layouts/Main';
 
 import theme from '../theme';
 
@@ -18,7 +19,10 @@ function MyApp({ Component, pageProps }) {
             useSystemColorMode: true
           }}
         >
+          <Main>
           <Component {...pageProps} />
+
+          </Main>
         </ColorModeProvider>
       </ChakraProvider>
     </ApolloProvider>
