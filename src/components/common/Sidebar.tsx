@@ -68,22 +68,22 @@ const Sidebar: React.FC = () => {
       shadow="md"
       {...darkMode}
       color="gray.600"
-    >
-      {/* LOGO, App Title */}
+		>
+			{/* LOGO, App Title */}
       <Box mb={4}>
         <Heading as="h3" size="md" color="gray.500" mb={3}>
           course up
         </Heading>
-      </Box>
+			</Box>
 
-      {/* Default Group, Home */}
+			{/* Default Group, Home */}
       <Box mb={4}>
-        <List spacing={2}>
-          <SidebarLink href="/" name="Home" icon={IoIosHome} />
-        </List>
-      </Box>
+      <List spacing={2}>
+        <SidebarLink href="/" name="Home" icon={IoIosHome} />
+      </List>
+			</Box>
 
-      {/* Page Groups */}
+			{/* Page Groups */}
       <SidebarGroup title="Course Management" />
     </Box>
   );
