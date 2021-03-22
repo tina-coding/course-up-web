@@ -1,18 +1,19 @@
-import { useRouter } from 'next/router';
-import NextLink from 'next/link';
 import {
   Box,
-  Grid,
-  GridItem,
+
+
   Heading,
   Link,
   List,
   ListIcon,
   ListItem
 } from '@chakra-ui/react';
-import { IoIosListBox, IoIosHome } from 'react-icons/io';
-import { useDarkModeAttr } from '../../hooks/useDarkModeAttr';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { IconType } from 'react-icons';
+import { FaChalkboardTeacher } from 'react-icons/fa';
+import { IoIosHome, IoIosListBox } from 'react-icons/io';
+import { useDarkModeSidebarAttr } from '../../hooks/useDarkModeSidebarAttr';
 
 type SidebarLinkProps = { href: string; name: string; icon: IconType };
 const SidebarLink: React.FC<SidebarLinkProps> = ({ href, name, icon }) => {
@@ -50,24 +51,22 @@ const SidebarGroup: React.FC<SidebarGroupProps> = ({ title }) => {
         {title}
       </Heading>
       {/* List of Links */}
-      <List spacing={2}>
+      <List spacing={4}>
         <SidebarLink href="/courses" name="Courses" icon={IoIosListBox} />
+        <SidebarLink href="/teachers" name="Teachers" icon={FaChalkboardTeacher} />
       </List>
     </Box>
   );
 };
 
 const Sidebar: React.FC = () => {
-  const darkMode = useDarkModeAttr();
+  const darkMode = useDarkModeSidebarAttr();
   return (
     <Box
       p={6}
       height="100vh"
-      borderRight="2px"
-      borderRightColor="gray.800"
-      shadow="md"
-      {...darkMode}
       color="gray.600"
+      {...darkMode}
 		>
 			{/* LOGO, App Title */}
       <Box mb={4}>

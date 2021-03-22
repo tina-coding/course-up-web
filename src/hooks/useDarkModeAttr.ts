@@ -1,6 +1,6 @@
 import { useColorMode } from "@chakra-ui/react";
 
-type DarkModeAttrReturnType = { bg: string, color: string };
+export type DarkModeAttrReturnType = { bg: string, color: string, colorMode: string };
 
 export const useDarkModeAttr = (): DarkModeAttrReturnType => {
 	const { colorMode } = useColorMode();
@@ -13,5 +13,5 @@ export const useDarkModeAttr = (): DarkModeAttrReturnType => {
 	const fontColor = color[colorMode];
 
 
-	return { bg: background, color: fontColor}
+	return { bg: background, color: fontColor, colorMode}
 }
