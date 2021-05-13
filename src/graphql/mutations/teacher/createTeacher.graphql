@@ -1,0 +1,3 @@
+mutation CreateTeacher($options: CreateTeacherInput!) {
+  createTeacher(options: $options)
+}
