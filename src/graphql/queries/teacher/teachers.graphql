@@ -1,0 +1,8 @@
+query Teachers {
+  teachers {
+    id
+    fName
+    lName
+    email
+  }
+}

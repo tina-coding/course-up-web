@@ -1,0 +1,17 @@
+mutation CreateCourse($options: CreateCourseInput!) {
+  createCourse(options: $options) {
+    course {
+      id
+      courseRef
+      name
+      description
+      credits
+      createdAt
+      updatedAt
+    }
+    errors {
+      field
+      message
+    }
+  }
+}
